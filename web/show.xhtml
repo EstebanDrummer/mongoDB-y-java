@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="resources/css/default.css"/> 
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <h:form>
+            <h:dataTable value ="#{movieSessionBean.movies}"
+                         var="m">
+                <h:column><f:facet name ="header">Name</f:facet> #{m.name}</h:column>
+                <h:column><f:facet name ="header">Year</f:facet> #{m.year}</h:column>
+                <h:column><f:facet name ="header">Languaje</f:facet> #{m.languaje}</h:column>
+            </h:dataTable>
+        </h:form>
+        <a href="index.xhtml"> Inicio</a>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+        <link rel="stylesheet" type="text/css" href="resources/css/default.css"/> 
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <div id="titulo">Pelicula a actualizar</div>
+        <h:form>
+       Name: <h:inputText value = "#{movie.name}" size="20"/><br/>
+       Year: <h:inputText value = "#{movie.year}" size="6"/><br/>
+       Language:<h:inputText value = "#{movie.languaje}" size="20"/><br/>
+       <div id="titulo">Datos nuevos</div>
+       <div> Name: <h:inputText value = "#{nameB}" size="20"/><br/>
+           Year: <h:inputText value = "#{yearB}" size="6"/><br/>
+       Language:<h:inputText value = "#{languajeB}" size="20"/><br/></div>
+       <h:commandButton actionListener = "#{movieSessionBean.updateMovie(nameB, yearB, languajeB)}"
+       action="show"
+       title="Update"
+       value="update"/>
+        
+       </h:form>
+        <a href="index.xhtml"> Inicio</a>
+    </body>
+</html>
