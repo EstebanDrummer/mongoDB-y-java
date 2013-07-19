@@ -68,6 +68,8 @@ public class MovieSessionBean {
        BasicDBObject o = movie.toDBObject();
        movieColl.remove(o);
    }
+      // se agrega este metodo para añadir funcionalidad de actualizar
+      
    public void updateMovie(String name,int year,String languaje) {
 	
        BasicDBObject newDocument = new BasicDBObject();
