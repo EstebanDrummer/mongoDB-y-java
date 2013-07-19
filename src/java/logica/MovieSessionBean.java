@@ -74,8 +74,6 @@ public class MovieSessionBean {
 	newDocument.put("name", name);
         newDocument.put("year", year);
         newDocument.put("languaje", languaje);
- 
-	//BasicDBObject searchQuery = new BasicDBObject().append("name", movie.getName());
         BasicDBObject searchQuery = movie.toDBObject();
 	movieColl.update(searchQuery, newDocument);
    }
